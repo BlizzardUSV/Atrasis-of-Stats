@@ -16,6 +16,8 @@ padding: 20px;
 background-color: black;
 }
 a{
+margin-left: auto;
+margin-right: auto;
 text-decoration: none;
 background-color: black;
 font-family: "Open-Sans", url("fonts/font.woff");
@@ -78,6 +80,29 @@ form[id=player_info]{
     padding: 20px;
 }
 a[id=button_select]{
+    width: 360px;
     margin-left: auto;
     margin-right: auto;
+    text-decoration: none;
+    background-color: black;
+    font-family: "Open-Sans", url("fonts/font.woff");
+    color:#FFF;
+    justify-content: center;
+    padding: 10px;
+    text-align: left;
+}
+a[id=button_select]:hover{
+    cursor: pointer;
+    background-color: rgb(41, 40, 40);
+    font-size: 19px;
+}
+
+p[id=button]{
+    text-align: justify;
+}
+p[id=button] span.gauche{
+    float: left;
+}
+p[id=button] span.droite{
+    float: right;
 }
