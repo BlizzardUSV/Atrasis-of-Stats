@@ -106,3 +106,13 @@ p[id=button] span.gauche{
 p[id=button] span.droite{
     float: right;
 }
+span[id=cadre]{
+    font-size: 22px;
+    text-align: left;
+    float: left;
+    margin: auto;
+    width: 50px;
+}
+span[id=no_cadre]{
+    margin: auto;
+}
