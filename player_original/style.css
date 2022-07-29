@@ -1,118 +1,408 @@
-body{
-font-family: "Open-Sans", "sans-serif";
-background-image: url("img/banner.png");
-}
-form[id=selection]{
-font-family: sans-serif;
-font-size: 18px;
-font-weight: bold;
-text-transform: uppercase;
-flex-direction: column;
-display: flex;
-margin-left: 550px;
-margin-right: 550px;
-justify-content: center;
-padding: 20px;
-background-color: black;
-}
-a{
-margin-left: auto;
-margin-right: auto;
-text-decoration: none;
-background-color: black;
-font-family: "Open-Sans", url("fonts/font.woff");
-color:#FFF;
-justify-content: center;
-padding: 10px;
-}
-a:hover{
-cursor: pointer;
-background-color: rgb(41, 40, 40);
-font-size: 19px;
-}
-img{
-    width: 400px;
-    margin-left: 550px;
-    margin-right: 550px;
-}
-a[id=back]{
-    margin: 0.5% auto;
-    margin-top: 5px;
-    background-color: cornflowerblue;
-    padding: 10px;
-    width: 20px;
-    font-size: 18px;
-}
-a[id=back]:hover{
-    cursor: pointer;
-    font-size: 18px;
-    padding: 11px;
-    background-color: rgb(116, 156, 230);
+.centeredSearch {
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
 }
 
-img[id=atrasis-of-stats]{  
-    width: 400px;
-    margin-left: 550px;
-    margin-right: 550px;
+input{
+    height: 3em;
+    background-color: transparent;
+
 }
-h1{
-    margin-left: auto;
-    margin-right: auto;
-    color: #FFF;
+
+input[id=input-01] {
+    text-align: center;
+    height: 2.5em;
+    width: 95%;
+    font-size: 120%;
+    background-color: #424242;
+    color: #FFFFFF;
 }
-h2{
-    color: #FFF;
-    margin-left: auto;
-    margin-right: auto;
+
+input[id=input-01]:focus {
+    color: black;
+    background-color: white;
 }
-form[id=player_info]{
-    margin-left: 0.5% auto;
-    margin-right: 0.5% auto;
-    margin-bottom: 0.5% auto;
+
+input[id=input-01]::placeholder {
+    color: #999999;
+    font-size: 85%;
+}
+
+button.suggestion{
+    height: 50px;
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 120%;
+    transition-duration: 0.4s;
+}
+
+button[class=suggestion]:hover {
+    background-color: #404040;
+}
+
+button{
+    height: 3em;
+}
+
+.typeInput {
+    width: 50%;
+}
+
+div[id=suggestions] {
+    width: 700px;
+    background-color: black;
+    margin-top: -0.8%;
+    border: none;
+}
+
+button[class=typesChoice] {
+    border-radius: 10px;
+    width:44%;
+    border: none;
+    letter-spacing: 1px;
+    color: white;
+    background-color: black;
+    font-size: 100%;
+    font-color: white;
+    transition-duration: 0.4s;
+    height: 3.5em;
+}
+
+div[class=typesChoiceText] {
+    transition-duration: 0.4s;
+    margin-bottom: 0%;
+}
+
+button[class=typesChoice]:hover {
+    background-color: #585858;
+}
+
+div[id=research-background] {
+    padding-top: 0.5%;
+    border-radius: 10px;
+    background-color: black;
+    width: 700px;
+    padding-bottom: 1.5%;
+}
+
+div[id=research_ensemble] {
+    margin-left:3%;
+    margin-right: 3%;
+    margin-top: 4%;
+}
+
+button[id=search] {
+    height: 100%;
+    background: transparent;
+    font-size: 150%;
+    padding-bottom: 1.5%;
+}
+
+div[id=player-background] {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4) ), url("../../static/img/player-background.jpg");
+    min-width: 960px;
+    background-size: auto 500px;
+    background-repeat: no-repeat;
+    height: 29em;
+}
+
+div[id=high-background] {
+    background-color: black;
+    height: 84px;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 90px 25% 10% 10%;
+    align-items: start;
+    justify-content: space-between;
+}
+}
+
+img {
+    margin-top: 4%;
+}
+
+div.container{
+    margin-top: 1%;
+}
+
+}
+div[id=bottom-background] {
+    background-color: black;
+    width: auto;
+    height: 10em;
+}
+
+label[id=rankingLabel], select[id=rankingSelect] {
+    font-size: 120%;
+    color: white;
+    background-color: black;
+}
+
+select[id=rankingSelect] {
+    font-size: 100%;
+}
+
+optgroup {
+    font-size: 80%;
+    color: #B6B6B6;
+}
+
+.rankingSuggestion {
+    font-size: 150%;
+    color: white;
+}
+
+div[id=logo-top] {
+    content: url("../../static/img/logo-home.png");
+    margin-left: 5%;
+    max-height: 100%;
+    width: 300%;
+    margin-top: 5%;
+    padding-bottom: 10%;
+}
+
+pre[id=rankingLabelName] {
+    font-family: Arial, sans-serif;
+    height: 0.5em;
+    margin-top: 0.2em;
+}
+div[id=subcontainer] {
+    background-color: black;
+    height: 2em;
+}
+
+form[id=research-form] {
+     background-color: black;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 25px;
+}
+
+td {
+    text-align: center;
+}
+
+center[id=home] {
+    background-color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+th[scope="row"] {
+    background-color: #d7d9f2;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
     font-family: sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    flex-direction: column;
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    padding: 20px;
-}
-a[id=button_select]{
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none;
-    background-color: black;
-    font-family: "Open-Sans", url("fonts/font.woff");
-    color:#FFF;
-    justify-content: center;
-    padding: 10px;
-    text-align: left;
-}
-a[id=button_select]:hover{
-    cursor: pointer;
-    background-color: rgb(41, 40, 40);
-    font-size: 19px;
+    font-size: .8rem;
+    background-color: white;
 }
 
-p[id=button]{
-    text-align: justify;
+img[id=logo-home]{
+    background-color: transparent;
+    margin-top: 2%;
 }
-p[id=button] span.gauche{
-    float: left;
+
+div[id=rankingButton] {
+    margin-left: 55%;
+    width: 25%;
 }
-p[id=button] span.droite{
-    float: right;
+
+button[id=back-home] {
+    background: transparent;
+    margin-left: -85%;
+    width: 210px;
+    height: 60%;
+    color: white;
+    font-size: 150%;
+    padding-bottom: 15%;
+    padding-top: 4%;
 }
-span[id=cadre]{
-    font-size: 22px;
-    text-align: left;
-    float: left;
-    margin: auto;
-    width: 50px;
+
+@media (orientation: landscape) {
+
+div[id=serverButton] {
+    margin-right: 130px;
 }
-span[id=no_cadre]{
-    margin: auto;
+    img[id=logo-home]{
+    margin-right: 130px;
 }
+
+div[id=rankingButton] {
+    margin-right: 270px;
+}
+
+}
+
+@media (orientation: portrait) {
+    button[id=back-home] {
+        width: 170%;
+    };
+    div[id=rankingButton] {
+        margin-right: 12em;
+    };
+    div[logo-home] {
+        margin-right: -2em;
+    };
+    
+
+}
+
+button[id=back-home]:hover {
+    background-color: #525252;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.rankingInfos {
+    font-size: 150%;
+}
+tr:hover {
+    background-color: yellow;
+}
+.icon {
+    margin-bottom: -2.5%;
+    width: 23%;
+    height: auto;
+    background-color: transparent;
+}
+select[id=serverSelect] {
+    background-color: black;
+    color: white;
+    font-size: 120%;
+}
+
+label {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 120%;
+        text-align: center;
+}
+
+div[id=serverButton] {
+    margin-top: 5%;
+    width: 25%;
+}
+span.profileData {
+    font-family: "Roboto", sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    color: white;
+    margin-right: 15%;
+    margin-left: 2%;
+    margin-right: 4%;
+    width: 62%;
+    padding: 1%;
+    border-radius: 10px;
+    padding-top: 4%;
+    padding-bottom: 9%;
+    padding-right: 5%;
+    padding-left: 5%;
+    display: block;
+    text-align: -webkit-center;
+    max-height: 1em;
+    margin-bottom: 5%;
+}
+
+.profileData:hover {
+    filter: brightness(110%);
+}
+
+.profileData:hover + .profileDataName {
+    display: block;
+    color: white;
+    background-color: grey;
+    opacity: 0.9;
+    margin-bottom: -23%;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    transform: scale(1.2);
+}
+
+span.profileData:hover ~ div[id=so] {
+    opacity: 0.1;
+}
+
+img.icon-profile {
+    width: 25%;
+    height: auto;
+    margin-bottom: -8%;
+    margin-right: 10%;
+}
+
+div.profileDataName {
+    display: none;
+    font-family: "Roboto",sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+div[id=playerInfos] {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+div.DataEnsemble {
+    display: grid;
+    width: 10em;
+    height: 2em;
+    grid-template-columns: 10em 10em 10em 10em;
+    align-items: start;
+    justify-content: center;
+    text-align: -webkit-center;
+}
+svg.v-icon__svg {
+    fill: white;
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: -9%;
+    margin-top: -1.5%;
+}
+
+body {
+    background-color: transparent;
+    max-width: 100%;
+}
+
+button[id=VisitInGameProfile] {
+    border-radius: 10px;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    background-color: #F0A802;
+    color: white;
+    height: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    border: none;
+}
+
+button[id=VisitInGameProfile]:hover {
+    margin-bottom: 5%;
+    background-color: #FFD26B;
+}
+
